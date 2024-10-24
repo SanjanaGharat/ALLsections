@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    
+    
+</head>
+
+<body>
+    <div id="assignment" class="flex flex-col items-center justify-center p-4">
+        <div class="text-center text-white text-4xl font-extrabold mb-8" style="font-family: 'PT Serif', serif;">
+            Our Services
+        </div>
+
+        <div class="swiper-container max-w-6xl mx-auto mt-14 px-4">
+            <div class="swiper-wrapper"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <!-- Blog section -->
+    <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-8 text-indigo-900">Latest Plumbing Blogs</h2>
+
+        <div class="unique-carousel">
+            <button class="arrow arrow-left" onclick="carousel.showSlide(carousel.currentIndex - 1)">
+                <span class="material-icons">chevron_left</span>
+            </button>
+
+            <div class="unique-carousel-inner" tabindex="0">
+                <div class="unique-carousel-item border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-white">
+                    <img src="img3.jpeg" alt="Hard Water Plumbing" class="w-full h-36 sm:h-48 object-cover">
+                    <div class="p-4 flex-grow">
+                        <p class="text-sm text-gray-500">Oct 8</p>
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-900">The Impact of Hard Water on Your Plumbing System in NYC</h3>
+                        <p class="text-gray-600 mb-4">Discover how hard water affects NYC plumbing systems and learn effective solutions to protect your pipes and appliances.</p>
+                    </div>
+                    <div class="p-4 flex justify-between items-center">
+                        <button class="flex items-center space-x-1 text-gray-500">
+                            <span class="material-icons">comment</span>
+                            <span>0</span>
+                        </button>
+                        <button class="flex items-center space-x-1 text-gray-500" onclick="carousel.toggleLike(this)">
+                            <span class="material-icons heart-icon">favorite_border</span>
+                            <span class="like-count">0</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="unique-carousel-item border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-white">
+                    <img src="img2.jpeg" alt="NYC Plumbing Codes" class="w-full h-36 sm:h-48 object-cover">
+                    <div class="p-4 flex-grow">
+                        <p class="text-sm text-gray-500">Oct 4</p>
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-900">Understanding NYC Plumbing Codes: What Homeowners Need to Know</h3>
+                        <p class="text-gray-600 mb-4">Navigate the complexities of NYC plumbing codes with our comprehensive guide tailored for homeowners.</p>
+                    </div>
+                    <div class="p-4 flex justify-between items-center">
+                        <button class="flex items-center space-x-1 text-gray-500">
+                            <span class="material-icons">comment</span>
+                            <span>0</span>
+                        </button>
+                        <button class="flex items-center space-x-1 text-gray-500" onclick="carousel.toggleLike(this)">
+                            <span class="material-icons heart-icon">favorite_border</span>
+                            <span class="like-count">0</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="unique-carousel-item border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden bg-white">
+                    <img src="img1.jpeg" alt="Eco-Friendly Plumbing" class="w-full h-36 sm:h-48 object-cover">
+                    <div class="p-4 flex-grow">
+                        <p class="text-sm text-gray-500">Oct 2</p>
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-900">Eco-Friendly Plumbing Solutions for Sustainable Living</h3>
+                        <p class="text-gray-600 mb-4">Discover sustainable plumbing options in NYC that save water, reduce bills, and promote eco-friendly living in the urban jungle.</p>
+                    </div>
+                    <div class="p-4 flex justify-between items-center">
+                        <button class="flex items-center space-x-1 text-gray-500">
+                            <span class="material-icons">comment</span>
+                            <span>0</span>
+                        </button>
+                        <button class="flex items-center space-x-1 text-gray-500" onclick="carousel.toggleLike(this)">
+                            <span class="material-icons heart-icon">favorite_border</span>
+                            <span class="like-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="arrow arrow-right" onclick="carousel.showSlide(carousel.currentIndex + 1)">
+                <span class="material-icons">chevron_right</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- BLOG SECTION ENDS HERE -->
+     <!-- Header -->
+    <div class="w-full p-6 bg-white shadow-lg flex justify-center">
+        <h1 class="text-center text-4xl font-bold">Areas Served </h1>
+    </div>
+
+    <!-- Areas Served Section -->
+    <div class="container mx-auto mt-8">
+        <div class="location-card   rounded-lg p-6 m-6 flex flex-col lg:flex-row items-center justify-center first-card">
+            <div class="lg:w-1/4 lg:order-1 h-40 rounded-lg overflow-hidden mr-4">
+                <a href="https://www.google.com/maps/place/Gateway+Of+India+Mumbai" target="_blank" rel="noopener noreferrer">
+                    <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1887.1062714819757!2d72.83317018864167!3d18.9219841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c73a0d5cad%3A0xc70a25a7209c733c!2sGateway%20Of%20India%20Mumbai!5e0!3m2!1sen!2sus!4v1729678461422!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </a>
+            </div>
+            <div class="lg:w-3/4 lg:order-2 text-center lg:text-left">
+                <h2 class="location-title text-2xl font-semibold mt-4">Mumbai</h2>
+                <p class="card-description mt-2">The bustling metropolis of India, known for its vibrant culture and history.</p>
+            </div>
+        </div>
+
+        <div class="location-card  rounded-lg p-6 m-6 flex flex-col lg:flex-row items-center justify-center middle-card">
+            <div class="lg:w-3/4 lg:order-1 text-center lg:text-right">
+                <h2 class="location-title text-2xl font-semibold mt-4">Delhi</h2>
+                <p class="card-description mt-2">The capital city of India, rich in historical significance and modern vibrancy.</p>
+            </div>
+            <div class="lg:w-1/4 lg:order-2 h-40 rounded-lg overflow-hidden ml-4">
+                <a href="https://www.google.com/maps/place/Dr.+Ambedkar+National+Memorial" target="_blank" rel="noopener noreferrer">
+                    <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12622.142367140232!2d77.22174010639051!3d28.681941172226693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdbc592a5653%3A0x975e06c57eab6d87!2sDr.%20Ambedkar%20National%20Memorial!5e0!3m2!1sen!2sus!4v1729678705335!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </a>
+            </div>
+        </div>
+
+        <div class="location-card rounded-lg p-6 m-6 flex flex-col lg:flex-row items-center justify-center third-card">
+            <div class="lg:w-1/4 lg:order-1 h-40 rounded-lg overflow-hidden mr-4">
+                <a href="https://maps.app.goo.gl/45Y2W6ZCpDrM1Zbx5" target="_blank" rel="noopener noreferrer">
+                    <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30453.93970956539!2d78.43554748013604!3d17.424142662039696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97558c2e9b6b%3A0x25705363cc844e9d!2sHussain%20Sagar!5e0!3m2!1sen!2sus!4v1729678729733!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </a>
+            </div>
+            <div class="lg:w-3/4 lg:order-2 text-center lg:text-left">
+                <h2 class="location-title text-2xl font-semibold mt-4">Hyderabad</h2>
+                <p class="card-description mt-2">Known for its rich heritage and culinary delights, the city blends tradition with modernity.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container mx-auto mt-8  mb-8">
+        
+        <div class="bg-white rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-center text-gray-800 py-6">Frequently Asked Questions</h2>
+            <div id="faq-container">
+                <div class="border-b">
+                    <button class="flex justify-between items-center w-full p-4 text-left text-gray-700 faq-button" onclick="toggleFAQ('faq1')">
+                        <span class="font-semibold">What plumbing services do you offer?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" id="icon-faq1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq1" class="hidden p-4 faq-content">
+                        <p class="text-gray-600">We offer a wide range of plumbing services, including leak repair, drain cleaning, water heater installation, and pipe replacement.</p>
+                    </div>
+                </div>
+                <div class="border-b">
+                    <button class="flex justify-between items-center w-full p-4 text-left text-gray-700 faq-button" onclick="toggleFAQ('faq2')">
+                        <span class="font-semibold">Are your plumbers licensed?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" id="icon-faq2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq2" class="hidden p-4 faq-content">
+                        <p class="text-gray-600">Yes, all of our plumbers are fully licensed and insured to ensure the highest level of service and professionalism.</p>
+                    </div>
+                </div>
+                <div class="border-b ">
+                    <button class="flex justify-between items-center w-full p-4 text-left text-gray-700 faq-button" onclick="toggleFAQ('faq3')">
+                        <span class="font-semibold">Do you provide emergency services?</span>
+                        <svg class="w-6 h-6 transform transition-transform duration-300" id="icon-faq3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq3" class="hidden p-4 faq-content">
+                        <p class="text-gray-600">Yes, we provide 24/7 emergency plumbing services to handle any urgent issues.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8"></div>
+        </div>
+    </div>
+   <!-- FAQ ENDS HERE -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+</body>
+
+</html>
