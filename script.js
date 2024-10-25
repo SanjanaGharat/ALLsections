@@ -172,10 +172,12 @@
 
         const visibleItems = Math.floor(carouselWidth / itemWidth);
 
-        if (visibleItems <= 2) {
+        if (visibleItems < 3) {
             this.autoSlideInterval = setInterval(() => {
                 this.showSlide(this.currentIndex + 1);
             }, 3000);
+        } else {
+            clearInterval(this.autoSlideInterval);  
         }
     }
 
@@ -189,6 +191,7 @@
         if (!this.isDragging) return;
 
         const currentX = e.pageX || e.touches[0].pageX;
+        this.currentX = currentX;  
         const deltaX = currentX - this.startX;
         const carouselInner = document.querySelector('.unique-carousel-inner');
         carouselInner.style.transform = `translateX(${deltaX}px)`;
@@ -201,11 +204,13 @@
 
     handleTouchEnd() {
         this.isDragging = false;
-         const items = document.querySelectorAll('.unique-carousel-item');
+        const items = document.querySelectorAll('.unique-carousel-item');
         const itemWidth = items[0].clientWidth;
         const deltaX = this.currentX - this.startX;
 
-        if (Math.abs(deltaX) > itemWidth / 3) {
+        const visibleItems = Math.floor(document.querySelector('.unique-carousel-inner').offsetWidth / itemWidth);
+
+        if (Math.abs(deltaX) > itemWidth / 3 && visibleItems < 3) {
             this.currentIndex += deltaX > 0 ? -1 : 1;
         }
         this.showSlide(this.currentIndex);
@@ -216,6 +221,7 @@
         this.showSlide(this.currentIndex);  
     }
 }
+
    
         const carousel = new UniqueCarousel();
 //    FAQ section
