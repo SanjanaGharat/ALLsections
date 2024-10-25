@@ -109,21 +109,20 @@
             },
         });
         // blog section
-        class UniqueCarousel {
+                class UniqueCarousel {
             constructor() {
                 this.currentIndex = 0;
                 this.autoSlideInterval = null;
                 this.isDragging = false;
                 this.startX = 0;
-                this.currentX = 0;
-
+        
                 this.init();
             }
-
+        
             init() {
                 this.checkAutoSlide();
                 this.showSlide(this.currentIndex);
-
+        
                 const carouselInner = document.querySelector('.unique-carousel-inner');
                 carouselInner.addEventListener('touchstart', (e) => this.handleTouchStart(e));
                 carouselInner.addEventListener('touchmove', (e) => this.handleTouchMove(e));
@@ -132,13 +131,18 @@
                 carouselInner.addEventListener('mousemove', (e) => this.handleMouseMove(e));
                 carouselInner.addEventListener('mouseup', () => this.handleTouchEnd());
                 carouselInner.addEventListener('mouseleave', () => this.handleTouchEnd());
+        
+                const nextButton = document.querySelector('.swiper-button-next');
+                const prevButton = document.querySelector('.swiper-button-prev');
+                nextButton.addEventListener('click', () => this.nextSlide());
+                prevButton.addEventListener('click', () => this.prevSlide());
             }
-
+        
             toggleLike(button) {
                 const heartIcon = button.querySelector('.heart-icon');
                 const likeCount = button.querySelector('.like-count');
                 let count = parseInt(likeCount.textContent);
-
+        
                 if (heartIcon.textContent === 'favorite_border') {
                     heartIcon.textContent = 'favorite';
                     heartIcon.classList.add('text-red-500');
@@ -149,60 +153,75 @@
                     likeCount.textContent = count - 1;
                 }
             }
-
+        
             showSlide(index) {
                 const items = document.querySelectorAll('.unique-carousel-item');
                 const totalItems = items.length;
-
+        
+               
                 this.currentIndex = (index + totalItems) % totalItems;
                 const offset = -this.currentIndex * items[0].clientWidth;
-
+        
                 document.querySelector('.unique-carousel-inner').style.transform = `translateX(${offset}px)`;
-
+        
+                
+                const leftNavArrow = document.querySelector('.swiper-button-prev');
+                const rightNavArrow = document.querySelector('.swiper-button-next');
+        
+                leftNavArrow.style.display = this.currentIndex > 0 ? 'block' : 'none';
+                rightNavArrow.style.display = this.currentIndex < totalItems - 1 ? 'block' : 'none';
+        
                 clearInterval(this.autoSlideInterval);
                 this.checkAutoSlide();
             }
-
+        
+            nextSlide() {
+                this.showSlide(this.currentIndex + 1);
+            }
+        
+            prevSlide() {
+                this.showSlide(this.currentIndex - 1);
+            }
+        
             checkAutoSlide() {
                 const items = document.querySelectorAll('.unique-carousel-item');
                 const carouselWidth = document.querySelector('.unique-carousel-inner').offsetWidth;
                 const itemWidth = items[0].offsetWidth;
-
+        
                 const visibleItems = Math.floor(carouselWidth / itemWidth);
-
+        
                 if (visibleItems <= 2) {
                     this.autoSlideInterval = setInterval(() => {
                         this.showSlide(this.currentIndex + 1);
                     }, 3000);
                 }
             }
-
+        
             handleTouchStart(e) {
                 this.isDragging = true;
                 this.startX = e.pageX || e.touches[0].pageX;
                 clearInterval(this.autoSlideInterval);
             }
-
+        
             handleTouchMove(e) {
                 if (!this.isDragging) return;
-
+        
                 const currentX = e.pageX || e.touches[0].pageX;
                 const deltaX = currentX - this.startX;
                 const carouselInner = document.querySelector('.unique-carousel-inner');
                 carouselInner.style.transform = `translateX(${deltaX}px)`;
             }
-
+        
             handleMouseMove(e) {
                 if (e.buttons === 0) this.handleTouchEnd();
                 else this.handleTouchMove(e);
             }
-
+        
             handleTouchEnd() {
                 this.isDragging = false;
                 this.showSlide(this.currentIndex);
             }
         }
-
         const carousel = new UniqueCarousel();
 //    FAQ section
 function toggleFAQ(faqId) {
