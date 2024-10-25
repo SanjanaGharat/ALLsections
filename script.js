@@ -74,7 +74,7 @@
             spaceBetween: 20,
             loop: true,
             autoplay: {
-                delay: 4000,
+                delay: 3000,
                 disableOnInteraction: false,
             },
             speed: 1500,
@@ -104,6 +104,7 @@
                 1280: {
                     slidesPerView: 4,
                     spaceBetween: 30,
+                    autoplay: false,
                 },
             },
         });
