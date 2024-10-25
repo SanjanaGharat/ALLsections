@@ -104,11 +104,11 @@
         }
 
         .unique-prev {
-            left: -9px;
+            left: 10px;
         }
 
         .unique-next {
-            right: -10px;
+            right: 10px;
         }
 
         /* BLOG SECTION  */
@@ -164,16 +164,16 @@
         }
 
         .arrow-left {
-            left: 10px;
+            left: -9px;
         }
 
         .arrow-right {
-            right: 10px;
+            right: -10px;
         }
 
-        .arrow:hover {
+/*         .arrow:hover {
             background: rgba(255, 255, 255, 1);
-        }
+        } */
 
         @media (max-width: 639px) {
             .arrow {
