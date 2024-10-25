@@ -104,11 +104,11 @@
         }
 
         .unique-prev {
-            left: 10px;
+            left: -9px;
         }
 
         .unique-next {
-            right: 10px;
+            right: -10px;
         }
 
         /* BLOG SECTION  */
