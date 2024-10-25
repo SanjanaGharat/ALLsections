@@ -201,6 +201,13 @@
 
     handleTouchEnd() {
         this.isDragging = false;
+         const items = document.querySelectorAll('.unique-carousel-item');
+        const itemWidth = items[0].clientWidth;
+        const deltaX = this.currentX - this.startX;
+
+        if (Math.abs(deltaX) > itemWidth / 3) {
+            this.currentIndex += deltaX > 0 ? -1 : 1;
+        }
         this.showSlide(this.currentIndex);
     }
 
