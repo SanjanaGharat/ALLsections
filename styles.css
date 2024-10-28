@@ -154,59 +154,60 @@ body {
 
 /* Areas Section Styling */
 h1, h2 {
-    color: #2A1786;
-}
-
-.location-card {
-    border-color: #2A1786;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
-    color: #2A1786;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
-    background-size: 200% 200%;
-}
-
-.location-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Area Titles */
-.location-title {
-    font-family: 'Arial', sans-serif;
-    color: white;
-    text-align: center;
-}
-
-/* Map Frame */
-.map-frame {
-    width: 100%;
-    height: 200px;
-    border: none;
-}
-
-/* Card Description */
-.card-description {
-    transition: color 0.3s ease;
-    color: white;
-    text-align: center;
-}
-
-.location-card:hover .card-description {
-    color: #f0f0f0;
-}
-
-/* Specific Card Backgrounds */
-.first-card {
-    background: linear-gradient(-135deg, #2A1786 50%, #ccd1da 50%);
-}
-
-.first-card:hover,
-.middle-card:hover,
-.third-card:hover {
-    background: #2A1786;
-    color: white;
-}
+        color: #2A1786;
+    }
+    .location-card {
+        border-color: #2A1786;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
+        color: #2A1786;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+        background-size: 200% 200%;
+    }
+    .location-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+    .location-title {
+        font-family: 'Arial', sans-serif;
+        color: white;
+        text-align: center;
+    }
+    .map-frame {
+        width: 100%;
+        height: 200px;
+        border: none;
+    }
+    .card-description {
+        transition: color 0.3s ease;
+        color: white;
+        text-align: center;
+    }
+    .location-card:hover .card-description {
+        color: #f0f0f0;
+    }
+    .first-card {
+        background: linear-gradient(-135deg, #2A1786 50%, #ccd1da 50%);
+    }
+    .first-card:hover {
+        background: #2A1786;
+        animation: none;
+        color: white;
+    }
+    .middle-card {
+        background: linear-gradient(135deg, #2A1786 50%, #ccd1da 50%);
+    }
+    .middle-card:hover {
+        background: #2A1786;
+    }
+    .third-card {
+        background: linear-gradient(-135deg, #2A1786 50%, #ccd1da 50%);
+    }
+    .third-card:hover {
+        background: #2A1786;
+        animation: none;
+        color: white;
+    }
 
 /* FAQ Section */
 .transition-height {
