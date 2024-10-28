@@ -19,30 +19,30 @@
         }
         @media (max-width: 640px) {
             #assignment {
-                padding: 1rem 0.5rem; /* Reduces padding to prevent cropping */
-                min-height: 80vh; /* Ensures all content is visible */
+                padding: 1rem 0.5rem; 
+                min-height: 80vh; 
             }
         }
         @media (min-width: 768px) {
             #assignment{
-                min-height: 100px; /* Slightly smaller max-width for medium screens */
+                min-height: 100px; 
             }
         }
         
         @media (min-width: 1024px) {
             #assignment {
-                min-height: 100px; /* Allow more width for larger screens */
+                min-height: 100px; 
             }
         }
     
         .service-card {
             transition: transform 0.5s ease, box-shadow 0.5s ease;
-            height: 300px; /* Set a fixed height for the cards */
+            height: 300px;
             padding: 1.5rem;
             max-width: 300px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Aligns content vertically */
+            justify-content: space-between; 
         }
     
         .service-card:hover {
@@ -140,7 +140,7 @@
 
         .unique-carousel-inner {
             display: flex;
-            transition: transform 0.5s ease;
+            transition: transform 0.3s ease;
             width: 100%;
         }
 
