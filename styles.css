@@ -6,7 +6,7 @@
         }
     
         #assignment {
-            height: 70vh; 
+            height: 80vh; 
             background: linear-gradient(135deg, #2A1768 50%, #ccd1da 50%);
             display: flex;
             flex-direction: column;
