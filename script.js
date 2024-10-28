@@ -175,7 +175,7 @@
         if (visibleItems < 3) {
             this.autoSlideInterval = setInterval(() => {
                 this.showSlide(this.currentIndex + 1);
-            }, 3000);
+            }, 4000);
         } else {
             clearInterval(this.autoSlideInterval);  
         }
