@@ -6,7 +6,7 @@
         }
     
         #assignment {
-            height: 80vh; 
+            height: auto;
             background: linear-gradient(135deg, #2A1768 50%, #ccd1da 50%);
             display: flex;
             flex-direction: column;
@@ -16,6 +16,7 @@
             max-width: 100vw; 
             overflow: hidden; 
         }
+        
     
         .service-card {
             transition: transform 0.5s ease, box-shadow 0.5s ease;
