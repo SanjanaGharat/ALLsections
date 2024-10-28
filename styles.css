@@ -1,159 +1,213 @@
-/* General Styles */
-body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-}
 
-/* Assignment Section */
-#assignment {
-    height: auto;
-    background: linear-gradient(135deg, #2A1768 50%, #ccd1da 50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 2rem 1rem;
-    width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
-}
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+    
+        #assignment {
+            height: auto;
+           
+            background: linear-gradient(135deg, #2A1768 50%, #ccd1da 50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 2rem 1rem;
+            width: 100%;
+            max-width: 100vw; 
+            overflow: hidden; 
+        }
+        @media (max-width: 640px) {
+            #assignment {
+                padding: 1rem 0.5rem; /* Reduces padding to prevent cropping */
+                min-height: 80vh; /* Ensures all content is visible */
+            }
+        }
+        @media (min-width: 768px) {
+            #assignment{
+                min-height: 100px; /* Slightly smaller max-width for medium screens */
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            #assignment {
+                min-height: 100px; /* Allow more width for larger screens */
+            }
+        }
+    
+        .service-card {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            height: 300px; /* Set a fixed height for the cards */
+            padding: 1.5rem;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Aligns content vertically */
+        }
+    
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+    
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 30%;
+            color: #2A1768;
+        }
+    
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 24px;
+            color: #2A1768;
+        }
+    
+        @media (max-width: 640px) {
+            .swiper-slide {
+                width: 100%;
+                flex: 0 0 30%;
+            }
+            .swiper-button-next,
+            .swiper-button-prev {
+                display: none;
+            }
+        }
+        .unique-carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+        }
 
-@media (max-width: 640px) {
-    #assignment {
-        padding: 1rem 0.5rem;
-        min-height: 80vh;
-    }
-}
+        .unique-carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+        }
 
-@media (min-width: 768px) {
-    #assignment {
-        min-height: auto;
-    }
-}
+        .unique-carousel-item {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
 
-/* Service Card Styling */
-.service-card {
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    height: 300px;
-    padding: 1.5rem;
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+        @media (min-width: 640px) {
+            .unique-carousel {
+                padding: 0;
+            }
 
-.service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-}
+            .unique-carousel-inner {
+                transition: none;
+                width: auto;
+            }
 
-/* Swiper Button Customization */
-.swiper-button-next,
-.swiper-button-prev {
-    top: 30%;
-    color: #2A1768;
-}
+            .unique-carousel-item {
+                flex: 1 1 calc(33.333% - 20px);
+                margin: 10px;
+            }
+        }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    font-size: 24px;
-    color: #2A1768;
-}
+        .unique-carousel-button {
+            position: absolute;
+            top: 30%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+             /* Hide the buttons */
+        }
 
-/* Hide Swiper Buttons on Small Screens */
-@media (max-width: 640px) {
-    .swiper-slide {
-        width: 100%;
-        flex: 0 0 30%;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: none;
-    }
-}
+        .unique-prev {
+            left: 10px;
+        }
 
-/* Unique Carousel Styling */
-.unique-carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    padding: 10px;
-}
+        .unique-next {
+            right: 10px;
+        }
 
-.unique-carousel-inner {
-    display: flex;
-    transition: transform 0.4s ease;
-    width: 100%;
-}
+        /* BLOG SECTION  */
+        .unique-carousel {
+            display: flex;
+            overflow: hidden;
+            padding: 10px;
+            position: relative;
+        }
 
-.unique-carousel-item {
-    flex: 0 0 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    padding: 8px;
-    margin: 8px;
-}
+        .unique-carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 100%;
+        }
 
-/* Responsive Carousel Layout */
-@media (min-width: 640px) {
-    .unique-carousel {
-        padding: 0;
-    }
-    .unique-carousel-item {
-        flex: 1 1 calc(33.333% - 20px);
-        margin: 10px;
-    }
-}
+        .unique-carousel-item {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin: 10px;
+        }
 
-@media (max-width: 1119px) {
-    .unique-carousel-item {
-        flex: 0 0 calc(50% - 20px);
-    }
-}
+        @media (min-width: 640px) {
+            .unique-carousel-item {
+                flex: 0 0 calc(33.333% - 20px);
+            }
+        }
 
-@media (max-width: 753px) {
-    .unique-carousel-item {
-        flex: 0 0 calc(100% - 20px);
-    }
-}
+        @media (max-width: 1119px) {
+            .unique-carousel-item {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
 
-/* Carousel Navigation Arrows */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 10;
-}
+        @media (max-width: 753px) {
+            .unique-carousel-item {
+                flex: 0 0 calc(100% - 20px);
+            }
+        }
 
-.arrow-left {
-    left: 10px;
-}
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            z-index: 10;
+        }
 
-.arrow-right {
-    right: 10px;
-}
+        .arrow-left {
+            left: 10px;
+        }
 
-/* Hide Arrows on Small Screens */
-@media (max-width: 639px) {
+        .arrow-right {
+            right: 10px;
+        }
+
+        /* .arrow:hover {
+            background: rgba(255, 255, 255, 1);
+        } */
+
+        @media (max-width: 639px) {
+            .arrow {
+                display: none;
+            }
+        }
+        @media (min-width: 1119px) {
     .arrow {
         display: none;
     }
 }
 
-/* Hide Arrows on Larger Screens */
-@media (min-width: 1119px) {
-    .arrow {
-        display: none;
-    }
-}
-
-/* Areas Section Styling */
-h1, h2 {
+        /* BLOG_SECTION ENDS */
+    /* AREAS section */
+    h1, h2 {
         color: #2A1786;
     }
     .location-card {
@@ -209,15 +263,12 @@ h1, h2 {
         color: white;
     }
 
-/* FAQ Section */
 .transition-height {
     transition: height 0.3s ease-in-out;
 }
-
 .faq-button:hover {
     background-color: rgba(42, 23, 134, 0.1);
 }
-
 .faq-content {
     background-color: #f9f9f9;
     border-left: 4px solid #2A1786;
