@@ -1,257 +1,222 @@
+/* General Styles */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            overflow-x: hidden;
-            margin: 0;
-            padding: 0;
-        }
-    
-        #assignment {
-            height: auto;
-            background: linear-gradient(135deg, #2A1768 50%, #ccd1da 50%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding: 2rem 1rem;
-            width: 100%;
-            max-width: 100vw; 
-            overflow: hidden; 
-        }
-        
-    
-        .service-card {
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
-            height: 300px; 
-            max-width: 300px;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; 
-        }
-    
-        .service-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-        }
-    
-        .swiper-button-next,
-        .swiper-button-prev {
-            top: 30%;
-            color: #2A1768;
-        }
-    
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-            font-size: 24px;
-            color: #2A1768;
-        }
-    
-        @media (max-width: 640px) {
-            .swiper-slide {
-                width: 100%;
-                flex: 0 0 30%;
-            }
-            .swiper-button-next,
-            .swiper-button-prev {
-                display: none;
-            }
-        }
-        .unique-carousel {
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            padding: 10px;
-        }
+/* Assignment Section */
+#assignment {
+    height: auto;
+    background: linear-gradient(135deg, #2A1768 50%, #ccd1da 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+}
 
-        .unique-carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
-            width: 100%;
-        }
+@media (max-width: 640px) {
+    #assignment {
+        padding: 1rem 0.5rem;
+        min-height: 80vh;
+    }
+}
 
-        .unique-carousel-item {
-            flex: 0 0 100%;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-        }
+@media (min-width: 768px) {
+    #assignment {
+        min-height: auto;
+    }
+}
 
-        @media (min-width: 640px) {
-            .unique-carousel {
-                padding: 0;
-            }
+/* Service Card Styling */
+.service-card {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    height: 300px;
+    padding: 1.5rem;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-            .unique-carousel-inner {
-                transition: none;
-                width: auto;
-            }
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
 
-            .unique-carousel-item {
-                flex: 1 1 calc(33.333% - 20px);
-                margin: 10px;
-            }
-        }
+/* Swiper Button Customization */
+.swiper-button-next,
+.swiper-button-prev {
+    top: 30%;
+    color: #2A1768;
+}
 
-        .unique-carousel-button {
-            position: absolute;
-            top: 30%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.7);
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 10;
-             
-        }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 24px;
+    color: #2A1768;
+}
 
-        .unique-prev {
-            left: 10px;
-        }
+/* Hide Swiper Buttons on Small Screens */
+@media (max-width: 640px) {
+    .swiper-slide {
+        width: 100%;
+        flex: 0 0 30%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
 
-        .unique-next {
-            right: 10px;
-        }
+/* Unique Carousel Styling */
+.unique-carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+}
 
-        /* BLOG SECTION  */
-        .unique-carousel {
-            display: flex;
-            overflow: hidden;
-            padding: 10px;
-            position: relative;
-        }
+.unique-carousel-inner {
+    display: flex;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
 
-        .unique-carousel-inner {
-            display: flex;
-            transition: transform 0.5s ease;
-            width: 100%;
-        }
+.unique-carousel-item {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin: 8px;
+}
 
-        .unique-carousel-item {
-            flex: 0 0 100%;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            margin: 10px;
-        }
+/* Responsive Carousel Layout */
+@media (min-width: 640px) {
+    .unique-carousel {
+        padding: 0;
+    }
+    .unique-carousel-item {
+        flex: 1 1 calc(33.333% - 20px);
+        margin: 10px;
+    }
+}
 
-        @media (min-width: 640px) {
-            .unique-carousel-item {
-                flex: 0 0 calc(33.333% - 20px);
-            }
-        }
+@media (max-width: 1119px) {
+    .unique-carousel-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
 
-        @media (max-width: 1119px) {
-            .unique-carousel-item {
-                flex: 0 0 calc(50% - 20px);
-            }
-        }
+@media (max-width: 753px) {
+    .unique-carousel-item {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
 
-        @media (max-width: 753px) {
-            .unique-carousel-item {
-                flex: 0 0 calc(100% - 20px);
-            }
-        }
+/* Carousel Navigation Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
 
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 50%;
-            z-index: 10;
-        }
+.arrow-left {
+    left: 10px;
+}
 
-        .arrow-left {
-            left: -9px;
-        }
+.arrow-right {
+    right: 10px;
+}
 
-        .arrow-right {
-            right: -10px;
-        }
-
-/*         .arrow:hover {
-            background: rgba(255, 255, 255, 1);
-        } */
-
-        @media (max-width: 639px) {
-            .arrow {
-                display: none;
-            }
-        }
-        @media (min-width: 1119px) {
+/* Hide Arrows on Small Screens */
+@media (max-width: 639px) {
     .arrow {
         display: none;
     }
 }
 
-        /* BLOG_SECTION ENDS */
-    /* AREAS section */
-    h1, h2 {
-        color: #2A1786;
+/* Hide Arrows on Larger Screens */
+@media (min-width: 1119px) {
+    .arrow {
+        display: none;
     }
-    .location-card {
-        border-color: #2A1786;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
-        color: #2A1786;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 1rem;
-        background-size: 200% 200%;
-    }
-    .location-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    }
-    .location-title {
-        font-family: 'Arial', sans-serif;
-        color: white;
-        text-align: center;
-    }
-    .map-frame {
-        width: 100%;
-        height: 200px;
-        border: none;
-    }
-    .card-description {
-        transition: color 0.3s ease;
-        color: white;
-        text-align: center;
-    }
-    .location-card:hover .card-description {
-        color: #f0f0f0;
-    }
-    .first-card {
-        background: linear-gradient(-135deg, #2A1786 50%, #ccd1da 50%);
-    }
-    .first-card:hover {
-        background: #2A1786;
-        animation: none;
-        color: white;
-    }
-    .middle-card {
-        background: linear-gradient(135deg, #2A1786 50%, #ccd1da 50%);
-    }
-    .middle-card:hover {
-        background: #2A1786;
-    }
-    .third-card {
-        background: linear-gradient(-135deg, #2A1786 50%, #ccd1da 50%);
-    }
-    .third-card:hover {
-        background: #2A1786;
-        animation: none;
-        color: white;
-    }
+}
 
+/* Areas Section Styling */
+h1, h2 {
+    color: #2A1786;
+}
+
+.location-card {
+    border-color: #2A1786;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease;
+    color: #2A1786;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    background-size: 200% 200%;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Area Titles */
+.location-title {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Map Frame */
+.map-frame {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+/* Card Description */
+.card-description {
+    transition: color 0.3s ease;
+    color: white;
+    text-align: center;
+}
+
+.location-card:hover .card-description {
+    color: #f0f0f0;
+}
+
+/* Specific Card Backgrounds */
+.first-card {
+    background: linear-gradient(-135deg, #2A1786 50%, #ccd1da 50%);
+}
+
+.first-card:hover,
+.middle-card:hover,
+.third-card:hover {
+    background: #2A1786;
+    color: white;
+}
+
+/* FAQ Section */
 .transition-height {
     transition: height 0.3s ease-in-out;
 }
+
 .faq-button:hover {
     background-color: rgba(42, 23, 134, 0.1);
 }
+
 .faq-content {
     background-color: #f9f9f9;
     border-left: 4px solid #2A1786;
